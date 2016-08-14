@@ -4,7 +4,7 @@ import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
-import java.util.Date;
+import java.security.Timestamp;
 
 /**
  * @author Ishaan
@@ -16,12 +16,12 @@ public class Alerts {
         super();
     }
 
-    public Alerts(ObjectId objectId, Double baseWeight, Double currentWeight, Date creationDate, String alertType) {
+    public Alerts(ObjectId objectId, Double baseWeight, Double currentWeight, Timestamp creationTimestamp, String alertType) {
         super();
         this.objectId = objectId;
         this.baseWeight = baseWeight;
         this.currentWeight = currentWeight;
-        this.creationDate = creationDate;
+        this.timestamp = creationTimestamp;
         this.alertType = alertType;
     }
 
@@ -31,7 +31,7 @@ public class Alerts {
     private Double currentWeight;
 
     private String alertType;
-    private Date creationDate;
+    private Timestamp timestamp;
 
     public String getAlertType() {
         return alertType;
@@ -65,12 +65,12 @@ public class Alerts {
         this.currentWeight = currentWeight;
     }
 
-    public Date getCreationDate() {
-        return creationDate;
+    public Timestamp getTimestamp() {
+        return timestamp;
     }
 
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
     }
 
 

@@ -4,7 +4,7 @@ import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 /**
  * @author Ishaan
@@ -16,16 +16,16 @@ public class Metrics {
         super();
     }
 
-    public Metrics(ObjectId objectId, Double weight, Date creationDate) {
+    public Metrics(ObjectId objectId, Double weight, Timestamp creationTimestamp) {
         super();
         this.objectId = objectId;
         this.weight = weight;
-        this.creationDate = creationDate;
+        this.creationTimestamp = creationTimestamp;
     }
 
     @Id
     private ObjectId objectId;
-    private Date creationDate;
+    private Timestamp creationTimestamp;
     private Double weight;
 
     public ObjectId getObjectId() {
@@ -36,12 +36,12 @@ public class Metrics {
         this.objectId = objectId;
     }
 
-    public Date getCreationDate() {
-        return creationDate;
+    public Timestamp getCreationTimestamp() {
+        return creationTimestamp;
     }
 
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
+    public void setCreationTimestamp(Timestamp creationTimestamp) {
+        this.creationTimestamp = creationTimestamp;
     }
 
     public Double getWeight() {

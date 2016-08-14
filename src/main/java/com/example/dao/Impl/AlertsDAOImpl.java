@@ -8,8 +8,8 @@ import org.mongodb.morphia.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -34,8 +34,8 @@ public class AlertsDAOImpl implements AlertsDAO {
     }
 
     @Override
-    public List<Alerts> getAlerts(Date from, Date to) {
-        final MorphiaIterator<Alerts, Alerts> morphiaIterator = datastore.createQuery(Alerts.class).field("creationDate").lessThan(to).field("creationDate").greaterThan((from)).fetch();
+    public List<Alerts> getAlerts(Timestamp from, Timestamp to) {
+        final MorphiaIterator<Alerts, Alerts> morphiaIterator = datastore.createQuery(Alerts.class).field("creationTimestamp").lessThan(to).field("creationTimestamp").greaterThan((from)).fetch();
         List<Alerts> alertsList=new ArrayList<>();
         Iterator<Alerts> alertsIterator = morphiaIterator.iterator();
         while(alertsIterator.hasNext()){

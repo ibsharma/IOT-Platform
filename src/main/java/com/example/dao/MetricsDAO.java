@@ -3,7 +3,7 @@ package com.example.dao;
 import com.example.dto.Metrics;
 import org.springframework.stereotype.Repository;
 
-import java.util.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -13,5 +13,5 @@ import java.util.List;
 public interface MetricsDAO {
     public void create(Metrics metrics);
     public List<Metrics> getMetrics();
-    public List<Metrics> getMetrics(Date from, Date to);
+    public List<Metrics> getMetrics(Timestamp from, Timestamp to);
 }

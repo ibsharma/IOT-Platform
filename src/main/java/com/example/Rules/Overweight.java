@@ -4,6 +4,7 @@ import com.example.dto.Alerts;
 import com.example.service.AlertsService;
 import org.easyrules.annotation.Action;
 import org.easyrules.annotation.Condition;
+import org.easyrules.annotation.Rule;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
@@ -11,6 +12,7 @@ import java.util.Date;
 /**
  * @author Ishaan
  */
+@Rule(name="overweight")
 public class Overweight {
 
     @Autowired
@@ -29,8 +31,7 @@ public class Overweight {
 
     public Overweight() {
     }
-
-
+    
     public String getAlertType() {
         return alertType;
     }
