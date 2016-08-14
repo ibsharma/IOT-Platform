@@ -13,16 +13,16 @@ import java.util.Date;
 public class Alerts {
 
     public Alerts() {
-
         super();
     }
 
-    public Alerts(ObjectId objectId, Double baseWeight, Double currentWeight, Date creationDate) {
+    public Alerts(ObjectId objectId, Double baseWeight, Double currentWeight, Date creationDate, String alertType) {
         super();
         this.objectId = objectId;
         this.baseWeight = baseWeight;
         this.currentWeight = currentWeight;
         this.creationDate = creationDate;
+        this.alertType = alertType;
     }
 
     @Id
