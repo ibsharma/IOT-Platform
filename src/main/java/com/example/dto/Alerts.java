@@ -21,7 +21,7 @@ public class Alerts {
         this.objectId = objectId;
         this.baseWeight = baseWeight;
         this.currentWeight = currentWeight;
-        this.timestamp = creationTimestamp;
+        this.creationTimestamp = creationTimestamp;
         this.alertType = alertType;
     }
 
@@ -31,7 +31,7 @@ public class Alerts {
     private Double currentWeight;
 
     private String alertType;
-    private Timestamp timestamp;
+    private Timestamp creationTimestamp;
 
     public String getAlertType() {
         return alertType;
@@ -66,11 +66,11 @@ public class Alerts {
     }
 
     public Timestamp getTimestamp() {
-        return timestamp;
+        return creationTimestamp;
     }
 
     public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
+        this.creationTimestamp = creationTimestamp;
     }
 
 

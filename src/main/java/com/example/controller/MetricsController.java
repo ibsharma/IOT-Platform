@@ -32,13 +32,13 @@ public class MetricsController {
         rulesService.executeRules(baseWeight, metricsIntermediate.getValue());
     }
 
-    @RequestMapping(value = "/retrieve", method = RequestMethod.GET, produces = "application/json")
-    public List<Metrics> retrieve() {
+    @RequestMapping(value = "/metrics", method = RequestMethod.GET, produces = "application/json")
+    public List<Metrics> getMetrics() {
         return metricsService.getMetrics();
     }
 
-    @RequestMapping(value = "/retrieve/from/{from}/to/{to}", method = RequestMethod.GET, produces = "application/json")
-    public List<Metrics> retrieveByTimeRange(@PathVariable("from") String from,
+    @RequestMapping(value = "/metrics/from/{from}/to/{to}", method = RequestMethod.GET, produces = "application/json")
+    public List<Metrics> getMetricsByTimeRange(@PathVariable("from") String from,
                                             @PathVariable("to") String to) {
         Timestamp fromTimestamp = new Timestamp(Long.valueOf(from));
         Timestamp toTimestamp = new Timestamp(Long.valueOf(to));

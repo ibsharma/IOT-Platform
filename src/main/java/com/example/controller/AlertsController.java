@@ -32,9 +32,7 @@ public class AlertsController {
     @RequestMapping(value="/getAlerts/from/{from}/to/{to}", method = RequestMethod.GET, produces = "application/json")
     public List<Alerts> getAlertsInATimeRange(@PathVariable String from, @PathVariable String to) {
         Timestamp fromTimestamp = new Timestamp(Long.parseLong(from));
-       // Date fromDate = new Date(fromTimestamp.getTime());
         Timestamp toTimestamp = new Timestamp(Long.valueOf(to));
-       // Date toDate = new Date(toTimestamp.getTime());
         return alertsService.getAlerts(fromTimestamp, toTimestamp);
     }
 }
