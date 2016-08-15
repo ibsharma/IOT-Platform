@@ -6,7 +6,7 @@ import com.example.service.AlertsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -29,7 +29,7 @@ public class AlertsServiceImpl implements AlertsService {
     }
 
     @Override
-    public List<Alerts> getAlerts(Date from, Date to) {
+    public List<Alerts> getAlerts(Timestamp from, Timestamp to) {
         return alertsDAO.getAlerts(from, to);
     }
 }

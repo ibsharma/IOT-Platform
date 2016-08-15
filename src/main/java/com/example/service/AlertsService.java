@@ -3,7 +3,7 @@ package com.example.service;
 import com.example.dto.Alerts;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -13,5 +13,5 @@ import java.util.List;
 public interface AlertsService {
     public void create(Alerts alerts);
     public List<Alerts> getAlerts();
-    public List<Alerts> getAlerts(Date from, Date to);
+    public List<Alerts> getAlerts(Timestamp from, Timestamp to);
 }

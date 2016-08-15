@@ -6,7 +6,7 @@ import com.example.service.MetricsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -29,7 +29,7 @@ public class MetricsServiceImpl implements MetricsService{
     }
 
     @Override
-    public List<Metrics> getMetrics(Date from, Date to) {
+    public List<Metrics> getMetrics(Timestamp from, Timestamp to) {
         return metricsDAO.getMetrics(from, to);
     }
 }

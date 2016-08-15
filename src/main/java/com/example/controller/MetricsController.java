@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import com.example.MetricsIntermediate;
-import com.example.Rules.RulesService;
+import com.example.rules.RulesService;
 import com.example.dto.Metrics;
 import com.example.service.MetricsService;
 import org.springframework.beans.factory.annotation.Autowired;

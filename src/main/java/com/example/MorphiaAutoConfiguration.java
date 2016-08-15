@@ -1,5 +1,7 @@
 package com.example;
 
+import com.example.rules.Overweight;
+import com.example.rules.Underweight;
 import com.mongodb.MongoClient;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
@@ -32,5 +34,15 @@ public class MorphiaAutoConfiguration {
         }
 
         return morphia.createDatastore(new MongoClient(), "db");
+    }
+
+    @Bean
+    public Overweight overweightBean() {
+        return new Overweight();
+    }
+
+    @Bean
+    public Underweight underweightBean() {
+        return new Underweight();
     }
 }

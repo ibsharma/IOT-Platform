@@ -1,4 +1,4 @@
-package com.example.Rules;
+package com.example.rules;
 import org.easyrules.api.RulesEngine;
 import org.easyrules.core.RulesEngineBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +37,6 @@ public class RulesService {
 
         underweight.setBaseWeight(baseWeight);
         underweight.setCurrentWeight(currentWeight);
-
 
         rulesEngine.registerRule(overweight);
         rulesEngine.registerRule(underweight);
