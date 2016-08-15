@@ -71,7 +71,6 @@ public class Overweight {
 
     @Action(order = 1)
     public void then() throws Exception {
-        java.util.Date date= new java.util.Date();
         Alerts alerts = new Alerts(null, baseWeight, currentWeight, new Timestamp(System.currentTimeMillis()), alertType);
         alertsService.create(alerts);
     }

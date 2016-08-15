@@ -69,7 +69,7 @@ public class Alerts {
         return creationTimestamp;
     }
 
-    public void setTimestamp(Timestamp timestamp) {
+    public void setTimestamp(Timestamp creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
     }
 
