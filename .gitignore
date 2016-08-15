@@ -4,3 +4,6 @@ egenbechallenge.iml
 mvnw
 mvnw.cmd
 target/
+.classpath
+.project
+.settings/
