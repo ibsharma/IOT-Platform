@@ -1,4 +1,4 @@
-# egenbechallenge
+# IOT Platform
 The goal of this exercise is to build a system that works like an IoT platform – in this case, a personal weight tracker. This system is responsible for:
 *	Consuming data sent from different sensors (emulators)
 *	Storing the received data in MongoDB
